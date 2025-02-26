@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  th:replace="~{base :: parent(~{::#content},~{::title},~{::script})}"
+>
+  <head>
+    <title data-th-text="${loggedInUser.name}+' |  Dashboard'">
+      DashBoard Page
+    </title>
+  </head>
+  <body>
+    <div id="content">
+      <!-- sidebar -->
+
+      <!-- user is logged in : sidebar -->
+
+      <div th:if="${loggedInUser}">
+        <div data-th-replace="~{user/sidebar :: sidebar}"></div>
+      </div>
+
+      <div class="sm:pl-64 pt-20" style="height: 1000px">
+        <div class="flex justify-center flex-col items-center">
+          <h1 class="text-5xl">Welcome to Dashboard page</h1>
+          <p class="text-1xl pt-20 font-semibold">
+			The SCM Dashboard is a user-friendly web application designed to manage essential 
+			contact information for a Supply Chain Management (SCM) system. This Webiste allows users 
+			to efficiently save, update, and delete contact numbers for easy access and 
+			communication within the system. The platform provides a simple interface where 
+			users can quickly input new contact numbers, update existing ones, or remove outdated 
+			entries from their contact list. With dynamic, real-time updates to the contact list, 
+			users can manage their contact information in an intuitive, streamlined way. The website 
+			is designed to enhance operational efficiency in managing key contacts in the supply 
+			chain process, ensuring that communication is always up-to-date and reliable.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      console.log("this is profile page");
+    </script>
+  </body>
+</html>
