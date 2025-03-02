@@ -106,7 +106,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
-		<finalName>scmproject</finalName>
+		<finalName>scm</finalName>
 	</build>
 
 </project>
